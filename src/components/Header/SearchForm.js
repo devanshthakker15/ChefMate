@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import "./Header.scss";
 import { BsSearch } from "react-icons/bs";
 import { useMealContext } from '../../context/mealContext';
@@ -8,8 +8,8 @@ import { startFetchMealsBySearch } from '../../actions/mealsActions';
 const SearchForm = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
-  const { dispatch, meals } = useMealContext();
+  // const [errorMsg, setErrorMsg] = useState("");
+  const { dispatch} = useMealContext();
 
   const handleSearchTerm = (e) => {
     e.preventDefault();
