@@ -8,7 +8,7 @@ import { startFetchMealsBySearch } from '../../actions/mealsActions';
 const SearchForm = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
-  // const [errorMsg, setErrorMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   const { dispatch, meals } = useMealContext();
 
   const handleSearchTerm = (e) => {
